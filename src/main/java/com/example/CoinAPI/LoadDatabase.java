@@ -14,7 +14,8 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(CoinRepo repo) {
         return args -> {
-            System.out.println("Loading " + repo.save(new Coin.Builder("Bitcion").build()));
+            Coin bitcoin = new Coin.Builder("Bitcion").withTicker("BTC").withNumOfCoins(16_770_000).withMarketCap(189_580_000_000L).build();
+            System.out.println("Loading " + repo.save(new Coin.Builder("Bitcoin").build()));
             System.out.println("Loading " + repo.save(new Coin.Builder("Some coin").build()));
             System.out.println("Loading " + repo.save(new Coin.Builder("Another coin").build()));
         };

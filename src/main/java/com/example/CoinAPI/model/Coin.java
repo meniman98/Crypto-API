@@ -15,7 +15,25 @@ public class Coin {
     private int numOfCoins;
     private Long marketCap;
 
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTicker() {
+        return ticker;
+    }
+
+    public int getNumOfCoins() {
+        return numOfCoins;
+    }
+
+    public Long getMarketCap() {
+        return marketCap;
+    }
+
     public static void main(String[] args) {
+
 
         // quick tests
         Coin coin = new Coin.Builder("bitcoin")
