@@ -24,8 +24,8 @@ public class Coin {
         Coin coin2 = new Coin.Builder("another coin")
                 .withMarketCap(199999999L).build();
 
-        System.out.println(coin.name + coin.ticker);
-        System.out.println(coin2.name + coin2.marketCap);
+        System.out.println(coin.toString());
+        System.out.println(coin2.toString());
     }
 
     //builder design pattern
@@ -75,4 +75,14 @@ public class Coin {
     private Coin() {
     }
 
+    @Override
+    public String toString() {
+        return "Coin{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", ticker='" + ticker + '\'' +
+                ", numOfCoins=" + numOfCoins +
+                ", marketCap=" + marketCap +
+                '}';
+    }
 }
