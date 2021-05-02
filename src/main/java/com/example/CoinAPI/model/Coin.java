@@ -12,6 +12,27 @@ public class Coin {
 
     private String name;
     private String ticker;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setTicker(String ticker) {
+        this.ticker = ticker;
+    }
+
+    public void setNumOfCoins(int numOfCoins) {
+        this.numOfCoins = numOfCoins;
+    }
+
+    public void setMarketCap(Long marketCap) {
+        this.marketCap = marketCap;
+    }
+
     private int numOfCoins;
     private Long marketCap;
 

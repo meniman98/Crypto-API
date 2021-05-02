@@ -8,10 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import org.slf4j.Logger;
@@ -30,7 +27,7 @@ public class CoinController {
         this.repo = repo;
     }
 
-
+    // get all coins
     @GetMapping(currencies)
     ResponseEntity<List<Coin>> getAllCoins(
             @RequestParam(defaultValue = "0") int pageNum,
@@ -43,11 +40,40 @@ public class CoinController {
         return new ResponseEntity<List<Coin>>(list, new HttpHeaders(), HttpStatus.OK);
     }
 
+    // get one coin
     @GetMapping(currencies + "/{id}")
     Coin returnOne(@PathVariable Long id) {
         return repo.findById(id)
-                .orElseThrow( () -> new CoinNotFoundException(id) )
+                .orElseThrow( () -> new CoinNotFoundException(id) );
     }
+
+    //make one coin
+    @PostMapping(currencies)
+    Coin newCoin(@RequestBody Coin newCoin) {
+        return repo.save(newCoin);
+    }
+
+    //edit one coin
+    @PutMapping(currencies + "/{id}")
+    Coin editCoin(@RequestBody Coin newCoin, @PathVariable long id) {
+        return repo.findById(id)
+                .map(coin -> {
+                    coin.setName(newCoin.getName());
+                    coin.setTicker(newCoin.getTicker());
+                    return repo.save(coin);
+                })
+                .orElseGet( () -> {
+                    newCoin.setId(id);
+                    return repo.save(newCoin);
+                } );
+    }
+
+    @DeleteMapping(currencies + "/{id}")
+    void deleteCoin(@PathVariable long id) {
+        repo.deleteById(id);
+    }
+
+
 
 
 }
