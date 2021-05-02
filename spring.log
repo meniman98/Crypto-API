@@ -56,3 +56,68 @@
 2021-05-02 18:13:40.579  WARN 4576 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
 2021-05-02 18:13:48.980  WARN 4576 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
 2021-05-02 18:14:09.221  WARN 4576 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: com.example.CoinAPI.model.Coin com.example.CoinAPI.controller.CoinController.newCoin(com.example.CoinAPI.model.Coin)]
+2021-05-02 19:33:58.306  INFO 7216 --- [main] com.example.CoinAPI.CoinApiApplication   : Starting CoinApiApplication using Java 15.0.2 on DESKTOP-JLVVGSI with PID 7216 (C:\Users\mrira\IdeaProjects\CoinAPI\target\classes started by mrira in C:\Users\mrira\IdeaProjects\CoinAPI)
+2021-05-02 19:33:58.309  INFO 7216 --- [main] com.example.CoinAPI.CoinApiApplication   : No active profile set, falling back to default profiles: default
+2021-05-02 19:33:58.882  INFO 7216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-02 19:33:58.949  INFO 7216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2021-05-02 19:33:59.407  INFO 7216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-02 19:33:59.416  INFO 7216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-02 19:33:59.416  INFO 7216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-02 19:33:59.513  INFO 7216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-02 19:33:59.513  INFO 7216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
+2021-05-02 19:33:59.645  INFO 7216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-02 19:33:59.777  INFO 7216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-02 19:33:59.819  INFO 7216 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-02 19:33:59.863  INFO 7216 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-02 19:33:59.977  INFO 7216 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-02 19:34:00.087  INFO 7216 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-02 19:34:00.566  INFO 7216 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-02 19:34:00.572  INFO 7216 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-02 19:34:00.802  WARN 7216 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-02 19:34:00.881  INFO 7216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-02 19:34:01.074  INFO 7216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-02 19:34:01.082  INFO 7216 --- [main] com.example.CoinAPI.CoinApiApplication   : Started CoinApiApplication in 3.14 seconds (JVM running for 3.515)
+2021-05-02 19:34:07.971  INFO 7216 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-02 19:34:07.971  INFO 7216 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-02 19:34:07.972  INFO 7216 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-05-02 19:34:08.132  INFO 7216 --- [http-nio-8080-exec-2] c.e.CoinAPI.controller.CoinController    : Get request works!
+2021-05-02 19:51:17.341  INFO 7756 --- [main] c.e.CoinAPI.CoinApiApplicationTests      : Starting CoinApiApplicationTests using Java 15.0.2 on DESKTOP-JLVVGSI with PID 7756 (started by mrira in C:\Users\mrira\IdeaProjects\CoinAPI)
+2021-05-02 19:51:17.343  INFO 7756 --- [main] c.e.CoinAPI.CoinApiApplicationTests      : No active profile set, falling back to default profiles: default
+2021-05-02 19:51:17.871  INFO 7756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-02 19:51:17.914  INFO 7756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2021-05-02 19:51:18.390  INFO 7756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-02 19:51:18.558  INFO 7756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-02 19:51:18.625  INFO 7756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-02 19:51:18.676  INFO 7756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-02 19:51:18.822  INFO 7756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-02 19:51:18.958  INFO 7756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-02 19:51:19.520  INFO 7756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-02 19:51:19.530  INFO 7756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-02 19:51:19.977  WARN 7756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-02 19:51:20.164  INFO 7756 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-02 19:51:20.473  INFO 7756 --- [main] c.e.CoinAPI.CoinApiApplicationTests      : Started CoinApiApplicationTests in 3.375 seconds (JVM running for 4.246)
+2021-05-02 19:51:20.741  INFO 7756 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-02 19:51:20.742  INFO 7756 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-02 19:51:20.742  INFO 7756 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-02 19:51:20.747  INFO 7756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-02 19:51:20.750  INFO 7756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-02 19:52:07.905  INFO 16076 --- [main] c.e.CoinAPI.CoinApiApplicationTests      : Starting CoinApiApplicationTests using Java 15.0.2 on DESKTOP-JLVVGSI with PID 16076 (started by mrira in C:\Users\mrira\IdeaProjects\CoinAPI)
+2021-05-02 19:52:07.907  INFO 16076 --- [main] c.e.CoinAPI.CoinApiApplicationTests      : No active profile set, falling back to default profiles: default
+2021-05-02 19:52:08.423  INFO 16076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-02 19:52:08.464  INFO 16076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2021-05-02 19:52:08.909  INFO 16076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-02 19:52:09.051  INFO 16076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-02 19:52:09.116  INFO 16076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-02 19:52:09.165  INFO 16076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-02 19:52:09.287  INFO 16076 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-02 19:52:09.414  INFO 16076 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-02 19:52:09.895  INFO 16076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-02 19:52:09.903  INFO 16076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-02 19:52:10.327  WARN 16076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-02 19:52:10.509  INFO 16076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-02 19:52:10.793  INFO 16076 --- [main] c.e.CoinAPI.CoinApiApplicationTests      : Started CoinApiApplicationTests in 3.129 seconds (JVM running for 3.971)
+2021-05-02 19:52:11.025  INFO 16076 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-02 19:52:11.026  INFO 16076 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-02 19:52:11.026  INFO 16076 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-02 19:52:11.030  INFO 16076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-02 19:52:11.033  INFO 16076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
