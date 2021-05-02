@@ -12,10 +12,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 public class CoinController {
     private final String currencies = "/currencies";
+    private static final Logger log = LoggerFactory.getLogger(CoinController.class);
 
     @Autowired
     CoinService service;
@@ -29,6 +32,7 @@ public class CoinController {
             @RequestParam(defaultValue = "id") String sortBy)
      {
     List<Coin> list = service.getAllCoins(pageNum, pageSize, sortBy);
+    log.info("Get request works!");
 
         return new ResponseEntity<List<Coin>>(list, new HttpHeaders(), HttpStatus.OK);
     }
