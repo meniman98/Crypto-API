@@ -1,13 +1,22 @@
 package com.example.CoinAPI;
 
+import com.example.CoinAPI.controller.CoinController;
 import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class CoinApiApplicationTests {
 
+	@Autowired
+	private CoinController controller;
+
 	@Test
-	void contextLoads() {
+	void contextLoads() throws Exception {
+		assertThat(controller).isNotNull();
 	}
+
+
 
 }
