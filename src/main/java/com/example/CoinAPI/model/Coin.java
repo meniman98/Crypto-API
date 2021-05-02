@@ -12,6 +12,8 @@ public class Coin {
 
     private String name;
     private String ticker;
+    private int numOfCoins;
+    private Long marketCap;
 
     public void setId(Long id) {
         this.id = id;
@@ -33,8 +35,6 @@ public class Coin {
         this.marketCap = marketCap;
     }
 
-    private int numOfCoins;
-    private Long marketCap;
 
 
     public String getName() {
