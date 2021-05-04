@@ -1,4 +1,4 @@
-package com.example.CoinAPI.Exception;
+package com.example.CoinAPI.exception;
 
 public class CoinNotFoundException extends RuntimeException {
     public CoinNotFoundException(Long id) {

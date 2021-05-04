@@ -6,6 +6,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Coin {
+
     @Id
     @GeneratedValue
     private Long id;
@@ -36,7 +37,6 @@ public class Coin {
     }
 
 
-
     public String getName() {
         return name;
     }
@@ -51,20 +51,6 @@ public class Coin {
 
     public Long getMarketCap() {
         return marketCap;
-    }
-
-    public static void main(String[] args) {
-
-
-        // quick tests
-        Coin coin = new Coin.Builder("bitcoin")
-                .withTicker("ticker").build();
-
-        Coin coin2 = new Coin.Builder("another coin")
-                .withMarketCap(199999999L).build();
-
-        System.out.println(coin.toString());
-        System.out.println(coin2.toString());
     }
 
     //builder design pattern
@@ -111,6 +97,7 @@ public class Coin {
 
 
     }
+
     private Coin() {
     }
 

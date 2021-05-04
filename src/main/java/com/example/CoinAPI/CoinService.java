@@ -8,8 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +23,7 @@ public class CoinService {
 
         if (result.hasContent()) {
             return result.getContent();
-        }
-        else {
+        } else {
             return new ArrayList<Coin>();
         }
 
