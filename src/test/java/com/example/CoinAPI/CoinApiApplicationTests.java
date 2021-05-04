@@ -5,10 +5,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @AutoConfigureMockMvc
@@ -26,10 +29,13 @@ class CoinApiApplicationTests {
         assertThat(controller).isNotNull();
     }
 
+    // check if get request is successful, and if 4 JSON objects are returned
     @Test
     void getRequest() throws Exception {
-        // this doesn't work
-        this.mvc.perform(get("/currencies")).andExpect(status().is2xxSuccessful());
+        this.mvc.perform(get("/currencies")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is2xxSuccessful())
+                .andExpect(jsonPath("$", hasSize(4)));
     }
 
     @Test
