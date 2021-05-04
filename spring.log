@@ -803,3 +803,32 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2021-05-04 14:04:15.958  INFO 996 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2021-05-04 14:04:15.963  INFO 996 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-05-04 14:04:15.966  INFO 996 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-04 22:50:53.425  INFO 3264 --- [main] com.example.CoinAPI.CoinApiApplication   : Starting CoinApiApplication using Java 15.0.2 on DESKTOP-JLVVGSI with PID 3264 (C:\Users\mrira\IdeaProjects\CoinAPI\target\classes started by mrira in C:\Users\mrira\IdeaProjects\CoinAPI)
+2021-05-04 22:50:53.428  INFO 3264 --- [main] com.example.CoinAPI.CoinApiApplication   : No active profile set, falling back to default profiles: default
+2021-05-04 22:50:54.265  INFO 3264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-04 22:50:54.329  INFO 3264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2021-05-04 22:50:55.056  INFO 3264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-04 22:50:55.072  INFO 3264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-04 22:50:55.072  INFO 3264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-04 22:50:55.198  INFO 3264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-04 22:50:55.200  INFO 3264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1698 ms
+2021-05-04 22:50:55.393  INFO 3264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-04 22:50:55.596  INFO 3264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-04 22:50:55.659  INFO 3264 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-04 22:50:55.741  INFO 3264 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-04 22:50:55.939  INFO 3264 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-04 22:50:56.126  INFO 3264 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-04 22:50:56.815  INFO 3264 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-04 22:50:56.826  INFO 3264 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-04 22:50:57.133  WARN 3264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-04 22:50:57.238  INFO 3264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 22:50:57.500  INFO 3264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-04 22:50:57.509  INFO 3264 --- [main] com.example.CoinAPI.CoinApiApplication   : Started CoinApiApplication in 4.625 seconds (JVM running for 5.209)
+2021-05-04 22:50:57.569  INFO 3264 --- [main] c.e.CoinAPI.controller.CoinController    : Loading Coin{id=1, name='Bitcion', ticker='BTC', numOfCoins=16770000, marketCap=189580000000}
+2021-05-04 22:50:57.571  INFO 3264 --- [main] c.e.CoinAPI.controller.CoinController    : Loading Coin{id=2, name='Ethereum', ticker='ETH', numOfCoins=96710000, marketCap=69280000000}
+2021-05-04 22:50:57.572  INFO 3264 --- [main] c.e.CoinAPI.controller.CoinController    : Loading Coin{id=3, name='Ripple', ticker='XRP', numOfCoins=38590000, marketCap=64750000000}
+2021-05-04 22:50:57.574  INFO 3264 --- [main] c.e.CoinAPI.controller.CoinController    : Loading Coin{id=4, name='BitcoinCash', ticker='BCH', numOfCoins=16670000, marketCap=69020000000}
+2021-05-04 22:51:16.752  INFO 3264 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-04 22:51:16.753  INFO 3264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-04 22:51:16.754  INFO 3264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-05-04 22:51:17.180  INFO 3264 --- [http-nio-8080-exec-1] c.e.CoinAPI.controller.CoinController    : Get request works!

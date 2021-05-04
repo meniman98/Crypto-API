@@ -35,7 +35,7 @@ public class CoinController {
             @RequestParam(defaultValue = "10") int pageSize,
             @RequestParam(defaultValue = "id") String sortBy) {
         List<Coin> list = service.getAllCoins(pageNum, pageSize, sortBy);
-        log.info("Get request works!");
+        log.info("getAllCoins() was called");
 
         return new ResponseEntity<List<Coin>>(list, new HttpHeaders(), HttpStatus.OK);
     }
