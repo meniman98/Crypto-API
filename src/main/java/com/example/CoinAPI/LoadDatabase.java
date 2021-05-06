@@ -17,7 +17,7 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(CoinRepo repo) {
         return args -> {
-            Coin bitcoin = new Coin.Builder("Bitcion").withTicker("BTC").withNumOfCoins(16_770_000).withMarketCap(189_580_000_000L).build();
+            Coin bitcoin = new Coin.Builder("Bitcoin").withTicker("BTC").withNumOfCoins(16_770_000).withMarketCap(189_580_000_000L).build();
             Coin ethereum = new Coin.Builder("Ethereum").withTicker("ETH").withNumOfCoins(96_710_000).withMarketCap(69_280_000_000L).build();
             Coin ripple = new Coin.Builder("Ripple").withTicker("XRP").withNumOfCoins(38_590_000).withMarketCap(64_750_000_000L).build();
             Coin bitcoinCash = new Coin.Builder("BitcoinCash").withTicker("BCH").withNumOfCoins(16_670_000).withMarketCap(69_020_000_000L).build();

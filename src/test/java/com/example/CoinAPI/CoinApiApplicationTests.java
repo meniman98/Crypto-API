@@ -1,6 +1,8 @@
 package com.example.CoinAPI;
 
 import com.example.CoinAPI.controller.CoinController;
+import com.example.CoinAPI.model.Coin;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -38,10 +40,11 @@ class CoinApiApplicationTests {
                 .andExpect(jsonPath("$", hasSize(4)));
     }
 
+    // check if a single coin can be retrieved and if the name is "Bitcoin"
     @Test
     void getSingleCoin() throws Exception {
-        this.mvc.perform(get("/currencies/1")).andExpect(status().is2xxSuccessful());
+        this.mvc.perform(get("/currencies/1")).andExpect(status().is2xxSuccessful())
+                .andExpect(jsonPath("$.name", Matchers.is("Bitcoin")));
     }
-
 
 }
