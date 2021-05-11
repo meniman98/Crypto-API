@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CoinService {
@@ -30,7 +31,8 @@ public class CoinService {
     }
 
     public Coin getCoin(Long id) {
-        return repo.getOne(id);
+        Optional<Coin> coin = repo.findById(id);
+        return coin.orElse(null);
     }
 
     public Coin createCoin(Coin newCoin) {

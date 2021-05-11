@@ -1,5 +1,6 @@
 package com.example.CoinAPI.controller;
 
+import com.example.CoinAPI.TestUtil;
 import com.example.CoinAPI.model.Coin;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.AfterEach;

@@ -1,4 +1,4 @@
-package com.example.CoinAPI.controller;
+package com.example.CoinAPI;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;

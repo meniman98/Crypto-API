@@ -17,6 +17,9 @@ public class Coin {
     private int numOfCoins;
     private Long marketCap;
 
+    Coin() {
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -41,6 +44,7 @@ public class Coin {
     public Long getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
@@ -102,8 +106,6 @@ public class Coin {
 
     }
 
-    private Coin() {
-    }
 
     @Override
     public String toString() {
