@@ -1,11 +1,8 @@
 package com.example.CoinAPI.controller;
 
-import com.example.CoinAPI.CoinService;
-import com.example.CoinAPI.exception.CoinNotFoundException;
+import com.example.CoinAPI.service.CoinService;
 import com.example.CoinAPI.model.Coin;
-import com.example.CoinAPI.repo.CoinRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,16 +14,12 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 public class CoinController {
+
     private final String currencies = "/currencies";
     private static final Logger log = LoggerFactory.getLogger(CoinController.class);
-    private final CoinRepo repo;
 
     @Autowired
-    CoinService service;
-
-    CoinController(CoinRepo repo) {
-        this.repo = repo;
-    }
+    private CoinService service;
 
     // get all coins
     @GetMapping(currencies)
@@ -34,42 +27,35 @@ public class CoinController {
             @RequestParam(defaultValue = "0") int pageNum,
             @RequestParam(defaultValue = "10") int pageSize,
             @RequestParam(defaultValue = "id") String sortBy) {
-        List<Coin> list = service.getAllCoins(pageNum, pageSize, sortBy);
-        log.info("getAllCoins() was called");
 
-        return new ResponseEntity<List<Coin>>(list, new HttpHeaders(), HttpStatus.OK);
+        // TODO test
+        if (pageNum < 0) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        return new ResponseEntity<>(service.getAllCoins(pageNum, pageSize, sortBy), HttpStatus.OK);
     }
 
     // get one coin
     @GetMapping(currencies + "/{id}")
-    public Coin returnOne(@PathVariable Long id) {
-        return repo.findById(id)
-                .orElseThrow(() -> new CoinNotFoundException(id));
+    public ResponseEntity<Coin> returnOne(@PathVariable Long id) {
+        return new ResponseEntity<>(service.getCoin(id), HttpStatus.OK);
     }
 
     //make one coin
     @PostMapping(currencies)
     Coin newCoin(@RequestBody Coin newCoin) {
-        return repo.save(newCoin);
+        return service.createCoin(newCoin);
     }
 
     //edit one coin
     @PutMapping(currencies + "/{id}")
     Coin editCoin(@RequestBody Coin newCoin, @PathVariable long id) {
-        return repo.findById(id)
-                .map(coin -> {
-                    coin.setName(newCoin.getName());
-                    coin.setTicker(newCoin.getTicker());
-                    return repo.save(coin);
-                })
-                .orElseGet(() -> {
-                    newCoin.setId(id);
-                    return repo.save(newCoin);
-                });
+        return service.replaceCoin(id, newCoin);
     }
 
     @DeleteMapping(currencies + "/{id}")
     void deleteCoin(@PathVariable long id) {
-        repo.deleteById(id);
+        service.deleteById(id);
     }
 }

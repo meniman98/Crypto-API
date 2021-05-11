@@ -4,6 +4,13 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+.idea
+.mvn
+CoinAPI.iml
+
+spring.log
+spring.log.*
+
 ### STS ###
 .apt_generated
 .classpath
